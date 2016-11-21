@@ -5,14 +5,16 @@ var scale = 3.6;
 var posx = 0;
 var posy = 0;
 
+var info;
+
 
 var mousedown = 0;
 var mousedrag = 0;
 var mouseX = 0, mouseY = 0;
 
 function init() {
-	canvas = SVG('canvas').size('100%', '100%')
-	svg = document.getElementById('canvas').firstChild;
+	canvas = SVG("canvas").size("100%", "100%");
+	svg = document.getElementById("canvas").firstChild;
 
 	network = canvas.group().attr({"id":"network"});
 
@@ -21,6 +23,8 @@ function init() {
 
 	console.log("num_stations = " + num_stations);
 	console.log("num_lines = " + num_lines);
+
+	info = document.getElementById("info");
 
 	initMouse();
 	setupKeyboard();
@@ -41,7 +45,7 @@ function initMouse() {
 
 	interact("#canvas").draggable({
 		restrict: {
-			  restriction: 'parent',
+			  restriction: "parent",
 		},
 		onmove: onDrag
 	});
@@ -80,8 +84,11 @@ function update() {
 	var t1x = mapcenterx; // + moffx;
 	var t1y = mapcentery; //+ moffy;
 
-	var t2x = t1x + posx + (bbox.width * 0.5 * scale);
-	var t2y = t1y + posy + (bbox.height * 0.5 * scale);
+//	var t2x = t1x + posx + (bbox.width * 0.5 * scale);
+//	var t2y = t1y + posy + (bbox.height * 0.5 * scale);
+
+	var t2x = posx + (bbox.width * 0.5 * scale);
+	var t2y = posy + (bbox.height * 0.5 * scale);
 
 	var t2 = "translate(" + t2x + " " + t2y + ")";
 	var s  = "scale(" + scale + ")";
@@ -128,24 +135,41 @@ function drawLines() {
 
 function drawStations() {
 	for (var station in stations) {
-		var x = stations[station].pos.x;
-		var y = stations[station].pos.y;
+		//var x = stations[station].pos.x;
+		//var y = stations[station].pos.y;
+		var x = (stations[station].geo.x) * 600;
+		var y = - (stations[station].geo.y) * 1000;
 		network.circle(2.2)
-				.attr({cx:x, cy:y})
+				.attr({name:stations[station].name ,cx:x, cy:y})
 				.fill({color:"#fff"})
 				.stroke({width:0.75, color:"#000"})
-				.addClass("station");
+				.addClass("station")
+				.mouseover(onMouseOverStation);
 	}
+}
+
+function onMouseOverStation(event) {
+	console.log(event.target.getAttribute("name"));
 }
 
 function drawLine(line) {
 	var first = true;
 	var i = 0;
 	var path = "";
+	var prev = null;
 
 	for (var station of line.stations) {
-		var x = (stations[station].pos.x + posx);
-		var y = (stations[station].pos.y + posy);
+		//var x = (stations[station].pos.x + posx);
+		//var y = (stations[station].pos.y + posy);
+		if (!first) {
+			console.log(stations[prev].name +" -> "+ stations[station].name);
+		}
+
+		var cpx = 0;
+		var cpy = 0;
+
+		var x = (stations[station].geo.x + posx) * 600;
+		var y = - (stations[station].geo.y + posy) * 1000;
 		if (line.offsets[i]) {
 			x += line.offsets[i].x;
 			y += line.offsets[i].y;
@@ -157,13 +181,14 @@ function drawLine(line) {
 			path += "L " + x + " " + y + " ";
 		}
 		++i;
+		prev = station;
 	}
 
 	network.path(path).fill({color:"none"}).stroke({color:line.color});
 }
 
 function setupKeyboard() {
-	document.addEventListener('keydown', function(event) {
+	document.addEventListener("keydown", function(event) {
 		if(event.keyCode == 37) {
 			moveleft();
 		}

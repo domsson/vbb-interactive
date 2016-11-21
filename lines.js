@@ -1,4 +1,5 @@
 var lines = {
+	/*
 	"U1": {
 		color:"#00FF00",
 		stations: ["WA","S","Gr","Kbo","Pr","Ho","Mo","Go","Kus","Nu","Wt","Kfu","U"],
@@ -19,9 +20,10 @@ var lines = {
 		stations: ["Olo","Np","Lpu","Am","WF","Bi","Tm","Ha","Zu","Kfu","Snu","Gt","Beo","Bd","Fw","Wsg","Slu","Rzu"],
 		offsets: [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
 	},
+	*/
 	"S41": {
 		color:"#CC3344",
-		stations: ["WF","We","GB","SAL","PLA","GSS","LST","STO","FAL","OK","TP","SO","NK","HER","TF","SK","SG","Ipo","Bd","HEI","HO","HAL","WKR","MN","WES","JUN","BEU","WF"],
+		stations: [9001201, 9009104, 9007102, 9110001, 9110002, 9110003, 9110004, 9110012, 9120001, 9120003, 9190001, 9077106, 9078201, 9079221, 9068201, 9058101, 9054104, 9054105, 9044202, 9045102, 9044101, 9040101, 9024102, 9024106, 9026207, 9020201, 9020202, 9001201],
 		offsets: [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
 	}
 };

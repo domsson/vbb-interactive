@@ -5,7 +5,7 @@
 		<title>VBB Liniennetz Interaktiv</title>
 		<script src="interact.js"></script>
 		<script src="svg.js"></script>
-		<script src="stations.js"></script>
+		<script src="stations_vbb.js"></script>
 		<script src="lines.js"></script>
 		<script src="vbb.js"></script>
 		<style>
@@ -72,7 +72,7 @@
 				fill: #0055ff;
 			}
 			#canvas > svg {
-				/*position: absolute;*/
+				position: absolute;
 			}
 		</style>
 	</head>
@@ -83,6 +83,6 @@
 		<button id="moveright" type="button" onclick="moveright();">→</button>
 		<button id="moveup" type="button" onclick="moveup();">↑</button>
 		<button id="movedown" type="button" onclick="movedown();">↓</button>
-		<div id="canvas" width="400" height="300"></div>
+		<div id="canvas"></div>
 	</body>
 </html>
