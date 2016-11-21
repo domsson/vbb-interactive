@@ -2,18 +2,21 @@ var stations = {
 	9003102: {
 		type: "S",
 		name: "Bellevue",
-		geo: {y:52.5199510, x:13.3470980},
+		zone: "A",
+		geo: {x:13.3470980, y:52.5199510},
 		pos: {x:0, y:0}
 	},
 	9003103: {
 		type: "S",
 		name: "Tiergarten",
+		zone: "A",
 		geo: {y:52.5139630, x:13.3362350},
 		pos: {x:0, y:0}
 	},
 	9007104: {
 		type: "S",
 		name: "Nordbahnhof",
+		zone: "A",
 		geo: {y:52.5316730, x:13.3887940},
 		pos: {x:0, y:0}
 	},
