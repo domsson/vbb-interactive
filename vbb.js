@@ -9,7 +9,6 @@ var posy = 0;
 var mousedown = 0;
 var mousedrag = 0;
 var mouseX = 0, mouseY = 0;
-var deltaX = 0, deltaY = 0;
 
 function init() {
 	canvas = SVG('canvas').size('100%', '100%')
@@ -28,17 +27,16 @@ function init() {
 
 	render();
 	update();
-
-	console.log(document.getElementById("network").getBBox());
 }
 
 function onDrag(event) {
-	deltaX += event.dx;
-	deltaY += event.dy;
+	posx += event.dx;
+	posy += event.dy;
 	update();
 }
 
 function initMouse() {
+	window.addEventListener("mousemove", onMouseMove, false);
 	window.addEventListener("wheel", onMouseWheel, false);
 
 	interact("#canvas").draggable({
@@ -50,6 +48,11 @@ function initMouse() {
 	interact("#canvas").styleCursor(false);
 }
 
+function onMouseMove(event) {
+	mouseX = event.clientX;
+	mouseY = event.clientY;
+}
+
 function onMouseWheel(event) {
 	if (event.target.id == "canvas") {
 		event.preventDefault();
@@ -59,25 +62,30 @@ function onMouseWheel(event) {
 }
 
 function render() {
-	//context.clearRect(0, 0, canvas.width, canvas.height);
 	drawLines();
 	drawStations();
 }
 
 function update() {
-	// TODO
 	var bbox = document.getElementById("network").getBBox();
-	//console.log(bbox);
 
-	var t1x = bbox.x + bbox.width * 0.5;
-	var t1y = bbox.y + bbox.height * 0.5;
+	var mapcenterx = bbox.x + (bbox.width * 0.5);
+	var mapcentery = bbox.y + (bbox.height * 0.5);
 
-	var t2x = t1x + posx + deltaX + (bbox.width * 0.5 * scale);
-	var t2y = t1y + posy + deltaY + (bbox.height * 0.5 * scale);
+	var moffx = mouseX - mapcenterx;
+	var moffy = mouseY - mapcentery;
+
+	console.log("mapcenterx="+mapcenterx+" mapcentery="+mapcentery);
+
+	var t1x = mapcenterx; // + moffx;
+	var t1y = mapcentery; //+ moffy;
+
+	var t2x = t1x + posx + (bbox.width * 0.5 * scale);
+	var t2y = t1y + posy + (bbox.height * 0.5 * scale);
 
 	var t2 = "translate(" + t2x + " " + t2y + ")";
 	var s  = "scale(" + scale + ")";
-	var t1 = "translate(-" + t1x + " -" + t1y + ")";
+	var t1 = "translate(" + (-t1x) + " " + (-t1y) + ")";
 
 	network.attr({transform: t2 + " " + s + " " + t1});
 }
@@ -120,7 +128,6 @@ function drawLines() {
 
 function drawStations() {
 	for (var station in stations) {
-		//console.log(stations[station].name);
 		var x = stations[station].pos.x;
 		var y = stations[station].pos.y;
 		network.circle(2.2)
