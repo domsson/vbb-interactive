@@ -137,8 +137,8 @@ function drawStations() {
 	for (var station in stations) {
 		//var x = stations[station].pos.x;
 		//var y = stations[station].pos.y;
-		var x = (stations[station].geo.x) * 600;
-		var y = - (stations[station].geo.y) * 1000;
+		var x = (stations[station].geo.lon) * 600;
+		var y = - (stations[station].geo.lat) * 1000;
 		network.circle(2.2)
 				.attr({name:stations[station].name ,cx:x, cy:y})
 				.fill({color:"#fff"})
@@ -165,8 +165,8 @@ function drawLine(line) {
 			//console.log(stations[prev].name +" -> "+ stations[station].name);
 		}
 
-		var x = (stations[station].geo.x + posx) * 600;
-		var y = - (stations[station].geo.y + posy) * 1000;
+		var x = (stations[station].geo.lon + posx) * 600;
+		var y = - (stations[station].geo.lat + posy) * 1000;
 		if (line.offsets[i]) {
 			x += line.offsets[i].x;
 			y += line.offsets[i].y;
