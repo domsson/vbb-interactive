@@ -2157,13 +2157,4 @@ var stations = {
 		pos: {x:0, y:0},
 		zone: ""
 	}
-/*
-	: {
-		type: "",
-		name: "",
-		geo: {lat:, lon:},
-		pos: {x:0, y:0},
-		zone: ""
-	}
-*/
 };
