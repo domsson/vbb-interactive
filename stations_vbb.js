@@ -276,19 +276,22 @@ var stations = {
 		type: "Humboldthain",
 		name: "S",
 		geo: {lat:52.5447420, lon:13.3787260},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "A"
 	},
 	9012101: {
 		type: "S",
 		name: "Anhalter Bahnhof",
 		geo: {lat:52.5045380, lon:13.3820770},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "A"
 	},
 	9020202: {
 		type: "S",
 		name: "Beusselstr.",
 		geo: {lat:52.5343140, lon:13.3287030},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "A"
 	},
 	9024101: {
 		type: "S",
@@ -399,31 +402,36 @@ var stations = {
 		type: "S",
 		name: "Sundgauer Str.",
 		geo: {lat:52.4361870, lon:13.2735010},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9050301: {
 		type: "S",
 		name: "Mexikoplatz",
 		geo: {lat:52.4371660, lon:13.2320600},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9050355: {
 		type: "S",
 		name: "Schlachtensee",
 		geo: {lat:52.4398060, lon:13.2139860},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9052201: {
 		type: "S",
 		name: "Nikolassee",
 		geo: {lat:52.4312100, lon:13.1932980},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9053301: {
 		type: "S",
 		name: "Wannsee Bhf",
 		geo: {lat:52.4214570, lon:13.1790990},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9054104: {
 		type: "S",
@@ -436,7 +444,8 @@ var stations = {
 		type: "S",
 		name: "Julius-Leber-Brücke",
 		geo: {lat:52.4862630, lon:13.3607750},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "A"
 	},
 	9058101: {
 		type: "S",
@@ -449,97 +458,113 @@ var stations = {
 		type: "S",
 		name: "Priesterweg",
 		geo: {lat:52.4592390, lon:13.3560280},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9060101: {
 		type: "S",
 		name: "Friedenau",
 		geo: {lat:52.4700020, lon:13.3405980},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9063101: {
 		type: "S",
 		name: "Feuerbachstr.",
 		geo: {lat:52.4635780, lon:13.3324120},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9063452: {
 		type: "S",
 		name: "Südende",
 		geo: {lat:52.4488990, lon:13.3540770},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9064201: {
 		type: "S",
 		name: "Lichterfelde Süd",
 		geo: {lat:52.4099560, lon:13.3086620},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9064256: {
 		type: "S",
 		name: "Osdorfer Str.",
 		geo: {lat:52.4183730, lon:13.3138650},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9064301: {
 		type: "S",
 		name: "Lichterfelde Ost Bhf",
 		geo: {lat:52.4290980, lon:13.3280780},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9066101: {
 		type: "S",
 		name: "Lichterfelde West",
 		geo: {lat:52.4435120, lon:13.2941410},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9066102: {
 		type: "S",
 		name: "Botanischer Garten",
 		geo: {lat:52.4475520, lon:13.3060410},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9067221: {
 		type: "S",
 		name: "Lankwitz",
 		geo: {lat:52.4390340, lon:13.3427600},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9068301: {
 		type: "S",
 		name: "Attilastr.",
 		geo: {lat:52.4472980, lon:13.3611770},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9072101: {
 		type: "S",
 		name: "Buckower Chaussee",
 		geo: {lat:52.4109190, lon:13.3826890},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9073101: {
 		type: "S",
 		name: "Marienfelde",
 		geo: {lat:52.4238160, lon:13.3750220},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9074201: {
 		type: "S",
 		name: "Lichtenrade",
 		geo: {lat:52.3877060, lon:13.3963580},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9074202: {
 		type: "S",
 		name: "Schichauweg",
 		geo: {lat:52.3985630, lon:13.3894570},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9077106: {
 		type: "S",
 		name: "Sonnenallee",
 		geo: {lat:52.4738220, lon:13.4559980},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "A"
 	},
 	9077155: {
 		type: "S",
@@ -552,7 +577,8 @@ var stations = {
 		type: "S",
 		name: "Wilhelmsruh",
 		geo: {lat:52.5815880, lon:13.3632840},
-		pos: {x:0, y:0}
+		pos: {x:0, y:0},
+		zone: "B"
 	},
 	9085105: {
 		type: "S",
