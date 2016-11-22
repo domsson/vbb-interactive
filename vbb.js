@@ -129,7 +129,7 @@ function movedown() {
 
 function drawLines() {
 	for (var line in lines) {
-		drawLine(lines[line]);
+		drawLine(lines[line], line);
 	}
 }
 
@@ -140,7 +140,7 @@ function drawStations() {
 		var x = (stations[station].geo.lon) * 600;
 		var y = - (stations[station].geo.lat) * 1000;
 		network.circle(2.2)
-				.attr({name:stations[station].name ,cx:x, cy:y})
+				.attr({id:"station-" + station, name:stations[station].name ,cx:x, cy:y})
 				.fill({color:"#fff"})
 				.stroke({width:0.75, color:"#000"})
 				.addClass("station")
@@ -152,7 +152,7 @@ function onMouseOverStation(event) {
 	console.log(event.target.getAttribute("name"));
 }
 
-function drawLine(line) {
+function drawLine(line, name) {
 	var first = true;
 	var i = 0;
 	var path = "";
@@ -181,7 +181,10 @@ function drawLine(line) {
 		prev = station;
 	}
 
-	network.path(path).fill({color:"none"}).stroke({color:line.color});
+	network.path(path)
+		.attr({id:"line-" + name})
+		.fill({color:"none"})
+		.stroke({color:line.color});
 }
 
 function setupKeyboard() {
