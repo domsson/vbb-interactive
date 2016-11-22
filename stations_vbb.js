@@ -793,5 +793,11 @@ var stations = {
 		name: "Wuhletal",
 		geo: {y:52.5124650, x:13.5754520},
 		pos: {x:0, y:0}
+	},
+	9003201: {
+		type: "S+U",
+		name: "Hauptbahnhof",
+		geo: {y:52.5258470, x:13.3689240},
+		pos: {x:0, y:0}
 	}
 };

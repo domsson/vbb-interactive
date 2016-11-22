@@ -162,11 +162,8 @@ function drawLine(line) {
 		//var x = (stations[station].pos.x + posx);
 		//var y = (stations[station].pos.y + posy);
 		if (!first) {
-			console.log(stations[prev].name +" -> "+ stations[station].name);
+			//console.log(stations[prev].name +" -> "+ stations[station].name);
 		}
-
-		var cpx = 0;
-		var cpy = 0;
 
 		var x = (stations[station].geo.x + posx) * 600;
 		var y = - (stations[station].geo.y + posy) * 1000;
