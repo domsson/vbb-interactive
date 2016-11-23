@@ -1,0 +1,79 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#canvas {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: #eee;
+}
+
+button {
+	position: absolute;
+	width: 2em;
+	height: 2em;
+	background: #fff;
+	border: 1px solid #999;
+}
+
+#zoomin {
+	top: 1em;
+	left: 2em;
+}
+
+#zoomout {
+	top: 1em;
+	left: 4.5em;
+}
+
+#moveleft {
+	top: 6em;
+	left: 1em;
+}
+
+#moveright {
+	top: 6em;
+	left: 5.5em;
+}
+
+#moveup {
+	top: 3.75em;
+	left: 3.25em;
+}
+
+#movedown {
+	top: 6em;
+	left: 3.25em;
+}
+
+svg, svg * {
+	pointer-events: none;
+}
+
+path {
+	pointer-events: visibleStroke;
+}
+
+circle {
+	pointer-events: visible;
+}
+
+path:hover {
+	opacity: 0.3;
+}
+
+circle:hover {
+	fill: #0055ff;
+}
+
+#canvas > svg {
+	position: absolute;
+}
