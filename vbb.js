@@ -61,7 +61,19 @@ function onMouseWheel(event) {
 	if (event.target.id == "canvas") {
 		event.preventDefault();
 	}
-	scale -= event.deltaY * 0.1;
+	var factor = 1.0;
+	switch (event.deltaMode) {
+		case WheelEvent.DOM_DELTA_PIXEL:
+			factor = 0.001;
+			break;
+		case WheelEvent.DOM_DELTA_LINE:
+			factor = 0.05;
+			break;
+		case WheelEvent.DOM_DELTA_PAGE:
+			factor = 1.0;
+			break;
+	}
+	scale -= event.deltaY * factor;
 	update();
 }
 
