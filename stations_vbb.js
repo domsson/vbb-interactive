@@ -273,8 +273,8 @@ var stations = {
 		zone: "A"
 	},
 	9008101: {
-		type: "Humboldthain",
-		name: "S",
+		type: "S",
+		name: "Humboldthain",
 		geo: {lat:52.5447420, lon:13.3787260},
 		pos: {x:0, y:0},
 		zone: "A"
