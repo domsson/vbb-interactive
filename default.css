@@ -54,6 +54,11 @@ button {
 	left: 3.25em;
 }
 
+#togglemode {
+	top: 1em;
+	right: 1em;
+}
+
 svg, svg * {
 	pointer-events: none;
 }

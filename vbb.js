@@ -5,8 +5,7 @@ var scale = 3.6;
 var posx = 0;
 var posy = 0;
 
-var info;
-
+var mode = 1;
 
 var mousedown = 0;
 var mousedrag = 0;
@@ -16,15 +15,11 @@ function init() {
 	canvas = SVG("canvas").size("100%", "100%");
 	svg = document.getElementById("canvas").firstChild;
 
-	network = canvas.group().attr({"id":"network"});
-
 	var num_stations = Object.keys(stations).length;
 	var num_lines = Object.keys(lines).length;
 
 	console.log("num_stations = " + num_stations);
 	console.log("num_lines = " + num_lines);
-
-	info = document.getElementById("info");
 
 	initMouse();
 	setupKeyboard();
@@ -77,7 +72,15 @@ function onMouseWheel(event) {
 	update();
 }
 
+function clear() {
+	network.remove();
+	scale = 3.6;
+	posx = 0;
+	posy = 0;
+}
+
 function render() {
+	network = canvas.group().attr({"id":"network"});
 	drawLines();
 	drawStations();
 }
@@ -107,6 +110,11 @@ function update() {
 	var t1 = "translate(" + (-t1x) + " " + (-t1y) + ")";
 
 	network.attr({transform: t2 + " " + s + " " + t1});
+/*
+	network.translate(-t1x, -t1y);
+	network.scale(scale, scale);
+	network.translate(t2x, t2y);
+*/
 }
 
 function zoomin() {
@@ -139,6 +147,14 @@ function movedown() {
 	update();
 }
 
+function togglemode() {
+	mode = (mode == 0) ? 1 : 0;
+	console.log(mode);
+	clear();
+	render();
+	update();
+}
+
 function drawLines() {
 	for (var line in lines) {
 		drawLine(lines[line], line);
@@ -147,10 +163,15 @@ function drawLines() {
 
 function drawStations() {
 	for (var station in stations) {
-		//var x = stations[station].pos.x;
-		//var y = stations[station].pos.y;
-		var x = (stations[station].geo.lon) * 600;
-		var y = - (stations[station].geo.lat) * 1000;
+		var x, y = 0;
+		if (mode == 0) {
+			x = stations[station].pos.x;
+			y = - stations[station].pos.y;
+		}
+		else {
+			x = (stations[station].geo.lon) * 600;
+			y = - (stations[station].geo.lat) * 1000;
+		}
 		network.circle(2.2)
 				.attr({id:"station-" + station, name:stations[station].name ,cx:x, cy:y})
 				.fill({color:"#fff"})
@@ -170,15 +191,16 @@ function drawLine(line, name) {
 	var path = "";
 	var prev = null;
 
+	var x, y = 0;
 	for (var station of line.stations) {
-		//var x = (stations[station].pos.x + posx);
-		//var y = (stations[station].pos.y + posy);
-		if (!first) {
-			//console.log(stations[prev].name +" -> "+ stations[station].name);
+		if (mode == 0) {
+			x = (stations[station].pos.x + posx);
+			y = - (stations[station].pos.y + posy);
 		}
-
-		var x = (stations[station].geo.lon + posx) * 600;
-		var y = - (stations[station].geo.lat + posy) * 1000;
+		else {
+			x = (stations[station].geo.lon + posx) * 600;
+			y = - (stations[station].geo.lat + posy) * 1000;
+		}
 		if (line.offsets[i]) {
 			x += line.offsets[i].x;
 			y += line.offsets[i].y;
