@@ -651,7 +651,7 @@ var stations = {
 		type: "S",
 		name: "Prenzlauer Allee",
 		geo: {lat:52.5448020, lon:13.4274190},
-		pos: {x:0, y:0}
+		pos: {x:200, y:38}
 	},
 	9110003: {
 		type: "S",
@@ -954,13 +954,13 @@ var stations = {
 		type: "S+U",
 		name: "Gesundbrunnen Bhf ",
 		geo: {lat:52.5486370, lon:13.3883720},
-		pos: {x:0, y:0}
+		pos: {x:149, y:38}
 	},
 	9009104: {
 		type: "S+U",
 		name: "Wedding",
 		geo: {lat:52.5427320, lon:13.3660600},
-		pos: {x:0, y:0}
+		pos: {x:121, y:38}
 	},
 	9020201: {
 		type: "S+U",
@@ -1083,7 +1083,7 @@ var stations = {
 		type: "S+U",
 		name: "Schönhauser Allee",
 		geo: {lat:52.5493360, lon:13.4151380},
-		pos: {x:0, y:0}
+		pos: {x:173, y:38}
 	},
 	9120001: {
 		type: "S+U",
