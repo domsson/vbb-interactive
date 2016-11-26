@@ -966,7 +966,7 @@ var stations = {
 		type: "S+U",
 		name: "Jungfernheide Bhf",
 		geo: {lat:52.5302750, lon:13.2990640},
-		pos: {x:0, y:0}
+		pos: {x:273, y:500}
 	},
 	9023201: {
 		type: "S+U",
@@ -979,7 +979,7 @@ var stations = {
 		type: "S+U",
 		name: "Rathaus Spandau",
 		geo: {lat:52.5357980, lon:13.1998910},
-		pos: {x:0, y:0}
+		pos: {x:54, y:482}
 	},
 	9044202: {
 		type: "S+U",
@@ -1005,7 +1005,7 @@ var stations = {
 		type: "S+U",
 		name: "Yorckstr.",
 		geo: {lat:52.4927660, lon:13.3704290},
-		pos: {x:0, y:0}
+		pos: {x:485, y:278}
 	},
 	9062202: {
 		type: "S+U",
@@ -1024,7 +1024,7 @@ var stations = {
 		type: "S+U",
 		name: "Neukölln",
 		geo: {lat:52.4692820, lon:13.4436920},
-		pos: {x:0, y:0},
+		pos: {x:686, y:226},
 		zone: "A"
 	},
 	9079221: {
@@ -1305,7 +1305,7 @@ var stations = {
 		type: "U",
 		name: "Gneisenaustr.",
 		geo: {lat:52.4912520, lon:13.3953820},
-		pos: {x:0, y:0},
+		pos: {x:571, y:293},
 		zone: "A"
 	},
 	9016201: {
@@ -1319,14 +1319,14 @@ var stations = {
 		type: "U",
 		name: "Südstern",
 		geo: {lat:52.4892190, lon:13.4076850},
-		pos: {x:0, y:0},
+		pos: {x:609, y:293},
 		zone: ""
 	},
 	9017101: {
 		type: "U",
 		name: "Mehringdamm",
 		geo: {lat:52.4935750, lon:13.3881530},
-		pos: {x:0, y:0},
+		pos: {x:541, y:299},
 		zone: ""
 	},
 	9017102: {
@@ -1347,7 +1347,7 @@ var stations = {
 		type: "U",
 		name: "Möckernbrücke",
 		geo: {lat:52.4989440, lon:13.3832560},
-		pos: {x:0, y:0},
+		pos: {x:512, y:332},
 		zone: ""
 	},
 /*
@@ -1363,21 +1363,21 @@ var stations = {
 		type: "U",
 		name: "Jakob-Kaiser-Platz",
 		geo: {lat:52.5369850, lon:13.2936610},
-		pos: {x:0, y:0},
+		pos: {x:265, y:513},
 		zone: ""
 	},
 	9018102: {
 		type: "U",
 		name: "Halemweg",
 		geo: {lat:52.5367030, lon:13.2865780},
-		pos: {x:0, y:0},
+		pos: {x:256, y:518},
 		zone: ""
 	},
 	9019204: {
 		type: "U",
 		name: "Mierendorffplatz",
 		geo: {lat:52.5259780, lon:13.3057150},
-		pos: {x:0, y:0},
+		pos: {x:291, y:461},
 		zone: ""
 	},
 	9022101: {
@@ -1398,7 +1398,7 @@ var stations = {
 		type: "U",
 		name: "Richard-Wagner-Platz",
 		geo: {lat:52.5171540, lon:13.3072210},
-		pos: {x:0, y:0},
+		pos: {x:291, y:425},
 		zone: ""
 	},
 	9023101: {
@@ -1433,21 +1433,21 @@ var stations = {
 		type: "U",
 		name: "Adenauerplatz",
 		geo: {lat:52.5000860, lon:13.3073480},
-		pos: {x:0, y:0},
+		pos: {x:291, y:325},
 		zone: ""
 	},
 	9024201: {
 		type: "U",
 		name: "Bismarckstr.",
 		geo: {lat:52.5115130, lon:13.3052860},
-		pos: {x:0, y:0},
+		pos: {x:291, y:394},
 		zone: ""
 	},
 	9024202: {
 		type: "U",
 		name: "Wilmersdorfer Str.",
 		geo: {lat:52.5058340, lon:13.3068850},
-		pos: {x:0, y:0},
+		pos: {x:291, y:367},
 		zone: ""
 	},
 	9025202: {
@@ -1489,63 +1489,63 @@ var stations = {
 		type: "U",
 		name: "Altstadt Spandau",
 		geo: {lat:52.5391610, lon:13.2067630},
-		pos: {x:0, y:0},
+		pos: {x:81, y:507},
 		zone: ""
 	},
 	9033101: {
 		type: "U",
 		name: "Zitadelle",
 		geo: {lat:52.5375220, lon:13.2176250},
-		pos: {x:0, y:0},
+		pos: {x:101, y:518},
 		zone: ""
 	},
 	9034101: {
 		type: "U",
 		name: "Paulsternstr.",
 		geo: {lat:52.5380980, lon:13.2485930},
-		pos: {x:0, y:0},
+		pos: {x:165, y:518},
 		zone: ""
 	},
 	9034102: {
 		type: "U",
 		name: "Haselhorst",
 		geo: {lat:52.5387180, lon:13.2323090},
-		pos: {x:0, y:0},
+		pos: {x:129, y:518},
 		zone: ""
 	},
 	9035101: {
 		type: "U",
 		name: "Siemensdamm",
 		geo: {lat:52.5370260, lon:13.2733230},
-		pos: {x:0, y:0},
+		pos: {x:228, y:518},
 		zone: ""
 	},
 	9036101: {
 		type: "U",
 		name: "Rohrdamm",
 		geo: {lat:52.5369040, lon:13.2628700},
-		pos: {x:0, y:0},
+		pos: {x:201, y:518},
 		zone: ""
 	},
 	9041101: {
 		type: "U",
 		name: "Fehrbelliner Platz",
 		geo: {lat:52.4902010, lon:13.3145190},
-		pos: {x:0, y:0},
+		pos: {x:319, y:269},
 		zone: ""
 	},
 	9041102: {
 		type: "U",
 		name: "Blissestr.",
 		geo: {lat:52.4863470, lon:13.3216180},
-		pos: {x:0, y:0},
+		pos: {x:333, y:265},
 		zone: ""
 	},
 	9041201: {
 		type: "U",
 		name: "Konstanzer Str.",
 		geo: {lat:52.4935670, lon:13.3100840},
-		pos: {x:0, y:0},
+		pos: {x:297, y:292},
 		zone: ""
 	},
 	9042101: {
@@ -1573,7 +1573,7 @@ var stations = {
 		type: "U",
 		name: "Berliner Str.",
 		geo: {lat:52.4870470, lon:13.3313550},
-		pos: {x:0, y:0},
+		pos: {x:347, y:265},
 		zone: ""
 	},
 	9045101: {
@@ -1643,14 +1643,14 @@ var stations = {
 		type: "U",
 		name: "Kleistpark",
 		geo: {lat:52.4908450, lon:13.3609170},
-		pos: {x:0, y:0},
+		pos: {x:447, y:265},
 		zone: ""
 	},
 	9054103: {
 		type: "U",
 		name: "Eisenacher Str.",
 		geo: {lat:52.4895290, lon:13.3502760},
-		pos: {x:0, y:0},
+		pos: {x:424, y:265},
 		zone: ""
 	},
 	9055101: {
@@ -1664,7 +1664,7 @@ var stations = {
 		type: "U",
 		name: "Bayerischer Platz",
 		geo: {lat:52.4886540, lon:13.3402370},
-		pos: {x:0, y:0},
+		pos: {x:402, y:265},
 		zone: ""
 	},
 	9056101: {
@@ -1755,21 +1755,21 @@ var stations = {
 		type: "U",
 		name: "Hermannplatz",
 		geo: {lat:52.4869570, lon:13.4247200},
-		pos: {x:0, y:0},
+		pos: {x:637, y:293},
 		zone: ""
 	},
 	9078102: {
 		type: "U",
 		name: "Rathaus Neukölln",
 		geo: {lat:52.4811460, lon:13.4348070},
-		pos: {x:0, y:0},
+		pos: {x:674, y:275},
 		zone: ""
 	},
 	9078103: {
 		type: "U",
 		name: "Karl-Marx-Str.",
 		geo: {lat:52.4764290, lon:13.4398050},
-		pos: {x:0, y:0},
+		pos: {x:686, y:261},
 		zone: ""
 	},
 	9079201: {
@@ -1790,63 +1790,63 @@ var stations = {
 		type: "U",
 		name: "Blaschkoallee",
 		geo: {lat:52.4527430, lon:13.4489760},
-		pos: {x:0, y:0},
+		pos: {x:686, y:198},
 		zone: ""
 	},
 	9080202: {
 		type: "U",
 		name: "Grenzallee",
 		geo: {lat:52.4635160, lon:13.4448280},
-		pos: {x:0, y:0},
+		pos: {x:686, y:214},
 		zone: ""
 	},
 	9080401: {
 		type: "U",
 		name: "Parchimer Allee",
 		geo: {lat:52.4453440, lon:13.4499250},
-		pos: {x:0, y:0},
+		pos: {x:686, y:180},
 		zone: ""
 	},
 	9080402: {
 		type: "U",
 		name: "Britz-Süd",
 		geo: {lat:52.4370760, lon:13.4476680},
-		pos: {x:0, y:0},
+		pos: {x:686, y:160},
 		zone: ""
 	},
 	9082201: {
 		type: "U",
 		name: "Lipschitzallee",
 		geo: {lat:52.4246450, lon:13.4631090},
-		pos: {x:0, y:0},
+		pos: {x:696, y:119},
 		zone: ""
 	},
 	9082202: {
 		type: "U",
 		name: "Johannisthaler Chaussee",
 		geo: {lat:52.4292530, lon:13.4538510},
-		pos: {x:0, y:0},
+		pos: {x:686, y:143},
 		zone: ""
 	},
 	9083101: {
 		type: "U",
 		name: "Zwickauer Damm",
 		geo: {lat:52.4230320, lon:13.4843710},
-		pos: {x:0, y:0},
+		pos: {x:726, y:90},
 		zone: ""
 	},
 	9083102: {
 		type: "U",
 		name: "Wutzkyallee",
 		geo: {lat:52.4231520, lon:13.4748200},
-		pos: {x:0, y:0},
+		pos: {x:712, y:103},
 		zone: ""
 	},
 	9083201: {
 		type: "U",
 		name: "Rudow",
 		geo: {lat:52.4156140, lon:13.4967340},
-		pos: {x:0, y:0},
+		pos: {x:737, y:76},
 		zone: ""
 	},
 	9085104: {
