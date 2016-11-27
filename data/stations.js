@@ -374,7 +374,7 @@ var stations = {
 		type: "S",
 		name: "Hohenzollerndamm",
 		geo: {lat:52.4883140, lon:13.3007120},
-		pos: {x:245, y:263},
+		pos: {x:243, y:259},
 		zone: "A"
 	},
 	9048101: {
@@ -896,13 +896,13 @@ var stations = {
 		type: "S",
 		name: "Plänterwald",
 		geo: {lat:52.4787220, lon:13.4740290},
-		pos: {x:784, y:263}
+		pos: {x:784, y:260}
 	},
 	9192001: {
 		type: "S",
 		name: "Schöneweide Bhf",
 		geo: {lat:52.4546110, lon:13.5101490},
-		pos: {x:838, y:207},
+		pos: {x:838, y:206},
 		zone: "B"
 	},
 	9192002: {
@@ -962,7 +962,8 @@ var stations = {
 		type: "S+U",
 		name: "Jungfernheide Bhf",
 		geo: {lat:52.5302750, lon:13.2990640},
-		pos: {x:273, y:500}
+//pos: {x:265, y:513},
+		pos: {x:273, y:505}
 	},
 	9023201: {
 		type: "S+U",
@@ -988,7 +989,7 @@ var stations = {
 		type: "S+U",
 		name: "Heidelberger Platz",
 		geo: {lat:52.4794460, lon:13.3118430},
-		pos: {x:280, y:226}
+		pos: {x:276, y:226}
 	},
 	9054105: {
 		type: "S+U",
@@ -1371,7 +1372,7 @@ var stations = {
 		type: "U",
 		name: "Halemweg",
 		geo: {lat:52.5367030, lon:13.2865780},
-		pos: {x:256, y:518},
+		pos: {x:255, y:518},
 		zone: "B"
 	},
 	9019204: {
@@ -1581,21 +1582,21 @@ var stations = {
 		type: "U",
 		name: "Rüdesheimer Platz",
 		geo: {lat:52.4724620, lon:13.3143870},
-		pos: {x:270, y:218},
+		pos: {x:266, y:216},
 		zone: "B"
 	},
 	9050201: {
 		type: "U",
 		name: "Krumme Lanke",
 		geo: {lat:52.4426150, lon:13.2403600},
-		pos: {x:189, y:138},
+		pos: {x:191, y:141},
 		zone: "B"
 	},
 	9050282: {
 		type: "U",
 		name: "Onkel Toms Hütte",
 		geo: {lat:52.4501460, lon:13.2540160},
-		pos: {x:200, y:148},
+		pos: {x:202, y:152},
 		zone: "B"
 	},
 	9051201: {
@@ -1609,28 +1610,28 @@ var stations = {
 		type: "U",
 		name: "Breitenbachplatz",
 		geo: {lat:52.4673420, lon:13.3092760},
-		pos: {x:260, y:208},
+		pos: {x:256, y:206},
 		zone: "B"
 	},
 	9051301: {
 		type: "U",
 		name: "Oskar-Helene-Heim",
 		geo: {lat:52.4504190, lon:13.2689100},
-		pos: {x:212, y:160},
+		pos: {x:213, y:163},
 		zone: "B"
 	},
 	9051302: {
 		type: "U",
 		name: "Podbielskiallee",
 		geo: {lat:52.4641720, lon:13.2952030},
-		pos: {x:249, y:197},
+		pos: {x:246, y:196},
 		zone: "B"
 	},
 	9051303: {
 		type: "U",
 		name: "Dahlem-Dorf",
 		geo: {lat:52.4576950, lon:13.2900110},
-		pos: {x:236, y:185},
+		pos: {x:235, y:185},
 		zone: "B"
 	},
 	9054101: {
