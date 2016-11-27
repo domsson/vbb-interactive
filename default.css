@@ -73,6 +73,7 @@ circle {
 
 path:hover {
 	opacity: 0.3;
+	stroke-width: 3;
 }
 
 circle:hover {

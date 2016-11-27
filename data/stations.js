@@ -241,7 +241,7 @@ var stations = {
 		type: "S",
 		name: "Hennigsdorf Bhf",
 		geo: {lat:52.6378660, lon:13.2058750},
-		pos: {x:265, y:699},
+		pos: {x:267, y:697},
 		zone: "C"
 	},
 	9003102: {
@@ -283,7 +283,7 @@ var stations = {
 		type: "S",
 		name: "Beusselstr.",
 		geo: {lat:52.5343140, lon:13.3287030},
-		pos: {x:343, y:514},
+		pos: {x:343, y:516},
 		zone: "A"
 	},
 	9024101: {
@@ -589,19 +589,20 @@ var stations = {
 		type: "S",
 		name: "Tegel",
 		geo: {lat:52.5888050, lon:13.2886950},
-		pos: {x:307, y:654}
+		pos: {x:308, y:656}
 	},
 	9091203: {
 		type: "S",
 		name: "Heiligensee",
 		geo: {lat:52.6251480, lon:13.2286670},
-		pos: {x:280, y:685}
+		pos: {x:280, y:684},
+		zone: "B"
 	},
 	9091205: {
 		type: "S",
 		name: "Schulzendorf",
 		geo: {lat:52.6135130, lon:13.2456300},
-		pos: {x:291, y:675}
+		pos: {x:292, y:672}
 	},
 	9092201: {
 		type: "S",
@@ -631,7 +632,7 @@ var stations = {
 		type: "S",
 		name: "Hackescher Markt",
 		geo: {lat:52.5226070, lon:13.4023580},
-		pos: {x:561, y:435},
+		pos: {x:561, y:439},
 		zone: "A"
 	},
 	9100007: {
@@ -644,7 +645,7 @@ var stations = {
 		type: "S",
 		name: "Prenzlauer Allee",
 		geo: {lat:52.5448020, lon:13.4274190},
-		pos: {x:683, y:514}
+		pos: {x:683, y:516}
 	},
 	9110003: {
 		type: "S",
@@ -943,19 +944,19 @@ var stations = {
 		type: "S+U",
 		name: "Westhafen",
 		geo: {lat:52.5361830, lon:13.3438370},
-		pos: {x:394, y:514}
+		pos: {x:394, y:516}
 	},
 	9007102: {
 		type: "S+U",
 		name: "Gesundbrunnen Bhf ",
 		geo: {lat:52.5486370, lon:13.3883720},
-		pos: {x:526, y:514}
+		pos: {x:526, y:516}
 	},
 	9009104: {
 		type: "S+U",
 		name: "Wedding",
 		geo: {lat:52.5427320, lon:13.3660600},
-		pos: {x:440, y:514}
+		pos: {x:444, y:516}
 	},
 	9020201: {
 		type: "S+U",
@@ -1047,7 +1048,8 @@ var stations = {
 		type: "S+U",
 		name: "Friedrichstr. Bhf",
 		geo: {lat:52.5202700, lon:13.3871530},
-		pos: {x:518, y:435},
+//		pos: {x:505, y:455},
+		pos: {x:521, y:439},
 		zone: "A"
 	},
 	9100003: {
@@ -1080,7 +1082,7 @@ var stations = {
 		type: "S+U",
 		name: "Schönhauser Allee",
 		geo: {lat:52.5493360, lon:13.4151380},
-		pos: {x:602, y:514}
+		pos: {x:602, y:516}
 	},
 	9120001: {
 		type: "S+U",
@@ -1120,7 +1122,7 @@ var stations = {
 		type: "S+U",
 		name: "Hauptbahnhof",
 		geo: {lat:52.5258470, lon:13.3689240},
-		pos: {x:457, y:435},
+		pos: {x:457, y:439},
 		zone: "A"
 	},
 	9002201: {
@@ -1183,21 +1185,21 @@ var stations = {
 		type: "U",
 		name: "Reinickendorfer Str.",
 		geo: {lat:52.5398950, lon:13.3703930},
-		pos: {x:454, y:507},
+		pos: {x:454, y:506},
 		zone: "A"
 	},
 	9009101: {
 		type: "U",
 		name: "Amrumer Str.",
 		geo: {lat:52.5422020, lon:13.3495340},
-		pos: {x:407, y:537},
+		pos: {x:407, y:539},
 		zone: "B"
 	},
 	9009102: {
 		type: "U",
 		name: "Leopoldplatz",
 		geo: {lat:52.5464930, lon:13.3593950},
-		pos: {x:413, y:545},
+		pos: {x:414, y:546},
 		zone: "B"
 	},
 	9009103: {
@@ -1211,14 +1213,14 @@ var stations = {
 		type: "U",
 		name: "Nauener Platz",
 		geo: {lat:52.5515240, lon:13.3673650},
-		pos: {x:434, y:564},
+		pos: {x:434, y:566},
 		zone: "B"
 	},
 	9009202: {
 		type: "U",
 		name: "Osloer Str.",
 		geo: {lat:52.5569380, lon:13.3732840},
-		pos: {x:456, y:588},
+		pos: {x:457, y:589},
 		zone: "B"
 	},
 	9009203: {
@@ -1249,7 +1251,7 @@ var stations = {
 		name: "Afrikanische Str.",
 		geo: {lat:52.5608620, lon:13.3335020},
 		pos: {x:368, y:592},
-		zone: ""
+		zone: "B"
 	},
 	9012102: {
 		type: "U",
@@ -1488,7 +1490,7 @@ var stations = {
 		type: "U",
 		name: "Altstadt Spandau",
 		geo: {lat:52.5391610, lon:13.2067630},
-		pos: {x:81, y:507},
+		pos: {x:81, y:509},
 		zone: "B"
 	},
 	9033101: {
@@ -1874,14 +1876,14 @@ var stations = {
 		name: "Otisstr.",
 		geo: {lat:52.5711220, lon:13.3030740},
 		pos: {x:332, y:628},
-		zone: ""
+		zone: "B"
 	},
 	9086102: {
 		type: "U",
 		name: "Kurt-Schumacher-Platz",
 		geo: {lat:52.5634830, lon:13.3273280},
-		pos: {x:352, y:606},
-		zone: ""
+		pos: {x:352, y:608},
+		zone: "B"
 	},
 	9086160: {
 		type: "U",
@@ -1894,28 +1896,28 @@ var stations = {
 		type: "U",
 		name: "Scharnweberstr.",
 		geo: {lat:52.5671110, lon:13.3115240},
-		pos: {x:342, y:619},
-		zone: ""
+		pos: {x:342, y:618},
+		zone: "B"
 	},
 	9088201: {
 		type: "U",
 		name: "Holzhauser Str.",
 		geo: {lat:52.5762520, lon:13.2950830},
 		pos: {x:323, y:637},
-		zone: ""
+		zone: "B"
 	},
 	9088202: {
 		type: "U",
 		name: "Borsigwerke",
 		geo: {lat:52.5821390, lon:13.2901220},
-		pos: {x:315, y:646},
+		pos: {x:315, y:645},
 		zone: "B"
 	},
 	9089301: {
 		type: "U",
 		name: "Alt-Tegel",
 		geo: {lat:52.5896490, lon:13.2838210},
-		pos: {x:303, y:653},
+		pos: {x:306, y:654},
 		zone: "B"
 	},
 	9096410: {
@@ -1936,8 +1938,8 @@ var stations = {
 		type: "U",
 		name: "Naturkundemuseum",
 		geo: {lat:52.5312540, lon:13.3824150},
-		pos: {x:486, y:475},
-		zone: ""
+		pos: {x:486, y:474},
+		zone: "A"
 	},
 	9100010: {
 		type: "U",
@@ -2000,7 +2002,7 @@ var stations = {
 		name: "Oranienburger Tor",
 		geo: {lat:52.5251630, lon:13.3875870},
 		pos: {x:505, y:455},
-		zone: ""
+		zone: "A"
 	},
 	9100023: {
 		type: "U",
@@ -2028,7 +2030,7 @@ var stations = {
 		name: "Schwartzkopffstr.",
 		geo: {lat:52.5353970, lon:13.3770330},
 		pos: {x:469, y:491},
-		zone: ""
+		zone: "A"
 	},
 	9110005: {
 		type: "U",

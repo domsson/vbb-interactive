@@ -5,7 +5,7 @@ var scale = 3.6;
 var posx = 0;
 var posy = 0;
 
-var mode = 1;
+var mode = 0;
 
 var mousedown = 0;
 var mousedrag = 0;
@@ -162,20 +162,26 @@ function drawLines() {
 }
 
 function drawStations() {
+	var x, y = 0;
+	var curr = null;
+	var r  = mode == 0 ? 5.2 : 2.2;
+	var sw = mode == 0 ? 0.75 : 0.75;
+
 	for (var station in stations) {
-		var x, y = 0;
+		curr = stations[station];
+
 		if (mode == 0) {
-			x = stations[station].pos.x;
-			y = - stations[station].pos.y;
+			x =   curr.pos.x;
+			y = - curr.pos.y;
 		}
 		else {
-			x = (stations[station].geo.lon) * 600;
-			y = - (stations[station].geo.lat) * 1000;
-		}
-		network.circle(2.2)
-				.attr({id:"station-" + station, name:stations[station].name ,cx:x, cy:y})
+			x =   (curr.geo.lon) * 600;
+			y = - (curr.geo.lat) * 1000;
+		}			
+		network.circle(r)
+				.attr({id:"station-" + station, name:curr.name ,cx:x, cy:y})
 				.fill({color:"#fff"})
-				.stroke({width:0.75, color:"#000"})
+				.stroke({width:sw, color:"#000"})
 				.addClass("station")
 				.mouseover(onMouseOverStation);
 	}
@@ -186,6 +192,147 @@ function onMouseOverStation(event) {
 }
 
 function drawLine(line, name) {
+	if (mode == 0) {
+		drawLineMap(line, name);
+	}
+	else {
+		drawLineGeo(line, name);
+	}
+}
+
+function drawLineMap(line, name) {
+	var path = "";
+	var prev, curr = null;
+	var px, py, cx, cy = 0;
+	var a, h, v = 0;
+	var i = 0;
+
+	for (var station of line.stations) {
+		prev = curr;
+		curr = stations[line.stations[i]];
+		next = stations[line.stations[i+1]];
+
+		if (prev) {
+			px =   prev.pos.x + (line.offsets[i-1] ? line.offsets[i-1].x : 0);
+			py = - prev.pos.y + (line.offsets[i-1] ? line.offsets[i-1].y : 0);
+		} else {
+			px = 0;
+			py = 0;
+		}
+
+		cx =   curr.pos.x + (line.offsets[i] ? line.offsets[i].x : 0);
+		cy = - curr.pos.y + (line.offsets[i] ? line.offsets[i].y : 0);
+
+		if (i == 0) {
+			path  = "M " + cx + " " + cy + " ";
+		} else {
+			var dx = cx - px;
+			var dy = cy - py;
+			var dxa = Math.abs(dx);
+			var dya = Math.abs(dy);
+
+			if (dxa == 0 && dya == 0) { // stations are in the same location
+				continue;
+			}
+			else if (dxa == 0) { // stations are on the same vertical line
+				path += "V " + cy + " ";
+				h = 0;
+				v = 1;
+			}
+			else if (dya == 0) { // stations are on the same horizontal line
+				path += "H " + cx + " ";
+				h = 1;
+				v = 0;
+			}
+			else if (dxa == dya) { // stations are on a perfect 45 degree line
+				//console.log("45: " + prev.name + " to " + curr.name);
+				path += "L " + cx + " " + cy + " ";
+				h = 1;
+				v = 1;
+			}
+			else { // this is where it gets complicated
+				if (dxa > dya) { // distance on x greater
+					if (h == 1 && v == 0) {
+						/*
+						// H -> D -> H
+						var ix1 = px + (dxa * 0.5 - dya * 0.5) * Math.sign(dx);
+						path += "H " + ix1 + " ";
+						var ix2 = ix1 + dya * Math.sign(dx);
+						path += "L " + ix2 + " " + cy + " ";
+						path += "H " + cx;
+						h = 1;
+						v = 0;
+						*/
+						// H -> D
+						path += "H " + (px + (dxa - dya) * Math.sign(dx)) + " ";
+						path += "L " + cx + " " + cy + " ";
+						h = 1;
+						v = 1;
+					}
+					else if (h == 0 && v == 1) {
+						// D -> H
+						path += "L " + (px + dya * Math.sign(dx)) + " " + cy + " ";
+						path += "H " + cx + " ";
+						h = 1;
+						v = 0;
+					}
+					else if (h == 1 && v == 1) {
+						// D -> H
+						path += "L " + (px + dya * Math.sign(dx)) + " " + cy + " ";
+						path += "H " + cx + " ";
+						h = 1;
+						v = 0;
+					}
+					else { // this is the first connection
+						// H -> D
+						path += "H " + (px + (dxa - dya) * Math.sign(dx)) + " ";
+						path += "L " + cx + " " + cy + " ";
+						h = 1;
+						v = 1;
+					}
+				}
+				else { // distance on y greater
+					if (h == 0 && v == 1) {
+						// V -> D
+						path += "V " + (py + (dya - dxa) * Math.sign(dy)) + " ";
+						path += "L " + cx + " " + cy + " ";
+						h = 1;
+						v = 1;
+					}
+					else if (h == 1 && v == 0) {
+						// D -> V
+						path += "L " + cx + " " + (py + dxa * Math.sign(dy)) + " ";
+						path += "V " + cy + " ";
+						h = 0;
+						v = 1;
+					}
+					else if (h == 1 && v == 1) {
+						// D -> V
+						path += "L " + cx + " " + (py + dxa * Math.sign(dy)) + " ";
+						path += "V " + cy + " ";
+						h = 0;
+						v = 1;
+					}
+					else { // this is the first connection
+						// V -> D
+						path += "V " + (py + (dya - dxa) * Math.sign(dy)) + " ";
+						path += "L " + cx + " " + cy + " ";
+						h = 1;
+						v = 1;
+					}
+				}
+			}
+		}
+		++i;
+	}
+
+	network.path(path)
+		.attr({id:"line-" + name})
+		.fill({color:"none"})
+		.stroke({width:3, color:line.color});
+}
+
+function drawLineGeo(line, name) {
 	var first = true;
 	var i = 0;
 	var path = "";
@@ -193,19 +340,9 @@ function drawLine(line, name) {
 
 	var x, y = 0;
 	for (var station of line.stations) {
-		if (mode == 0) {
-			x = (stations[station].pos.x + posx);
-			y = - (stations[station].pos.y + posy);
-		}
-		else {
-			x = (stations[station].geo.lon + posx) * 600;
-			y = - (stations[station].geo.lat + posy) * 1000;
-		}
-		/*
-		if (x === 0 && y === 0) {
-			continue;
-		}
-		*/
+		x =   stations[station].geo.lon * 600;
+		y = - stations[station].geo.lat * 1000;
+
 		if (line.offsets[i]) {
 			x += line.offsets[i].x;
 			y += line.offsets[i].y;
