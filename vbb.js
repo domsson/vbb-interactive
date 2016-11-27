@@ -202,9 +202,10 @@ function drawLine(line, name) {
 
 function drawLineMap(line, name) {
 	var path = "";
-	var prev, curr = null;
+	var prev, curr, next = null;
 	var px, py, cx, cy = 0;
 	var a, h, v = 0;
+	var dir = "n";
 	var i = 0;
 
 	for (var station of line.stations) {
@@ -343,10 +344,6 @@ function drawLineGeo(line, name) {
 		x =   stations[station].geo.lon * 600;
 		y = - stations[station].geo.lat * 1000;
 
-		if (line.offsets[i]) {
-			x += line.offsets[i].x;
-			y += line.offsets[i].y;
-		}
 		if (first) {
 			path += "M " + x + " " + y + " ";
 			first = false;
