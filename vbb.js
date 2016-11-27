@@ -201,6 +201,11 @@ function drawLine(line, name) {
 			x = (stations[station].geo.lon + posx) * 600;
 			y = - (stations[station].geo.lat + posy) * 1000;
 		}
+		/*
+		if (x === 0 && y === 0) {
+			continue;
+		}
+		*/
 		if (line.offsets[i]) {
 			x += line.offsets[i].x;
 			y += line.offsets[i].y;
