@@ -10,77 +10,77 @@ var stations = {
 		type: "S",
 		name: "Oranienburg Bhf",
 		geo: {lat:52.7543620, lon:13.2484320},
-		pos: {x:373, y:737},
+		pos: {x:461, y:934},
 		zone: "C"
 	},
 	9200006: {
 		type: "S",
 		name: "Lehnitz",
 		geo: {lat:52.7412730, lon:13.2631910},
-		pos: {x:383, y:729},
+		pos: {x:471, y:924},
 		zone: "C"
 	},
 	9200007: {
 		type: "S",
 		name: "Borgsdorf",
 		geo: {lat:52.7144910, lon:13.2767710},
-		pos: {x:390, y:722},
+		pos: {x:480, y:915},
 		zone: "C"
 	},
 	9200008: {
 		type: "S",
 		name: "Birkenwerder Bhf",
 		geo: {lat:52.6878710, lon:13.2884170},
-		pos: {x:395, y:714},
+		pos: {x:489, y:906},
 		zone: "C"
 	},
 	9200009: {
 		type: "S",
 		name: "Hohen Neuendorf",
 		geo: {lat:52.6694340, lon:13.2872240},
-		pos: {x:406, y:702},
+		pos: {x:504, y:891},
 		zone: "C"
 	},
 	9245027: {
 		type: "S",
 		name: "Blankenfelde (TF) Bhf",
 		geo: {lat:52.3376280, lon:13.4159080},
-		pos: {x:527, y:4},
+		pos: {x:657, y:2},
 		zone: "C"
 	},
 	9245028: {
 		type: "S",
 		name: "Mahlow",
 		geo: {lat:52.3601640, lon:13.4087750},
-		pos: {x:527, y:26},
+		pos: {x:657, y:21},
 		zone: "C"
 	},
 	9350160: {
 		type: "S",
 		name: "Bernau Bhf",
 		geo: {lat:52.6762330, lon:13.5930340},
-		pos: {x:726, y:729},
+		pos: {x:915, y:924},
 		zone: "C"
 	},
 	9350161: {
 		type: "S",
 		name: "Bernau-Friedenstal",
 		geo: {lat:52.6683690, lon:13.5645970},
-		pos: {x:718, y:718},
+		pos: {x:902, y:911},
 		zone: "C"
 	},
 	9350162: {
 		type: "S",
 		name: "Röntgental",
 		geo: {lat:52.6490620, lon:13.5143020},
-		pos: {x:698, y:699},
+		pos: {x:876, y:885},
 		zone: "C"
 	},
 	9350163: {
 		type: "S",
 		name: "Zepernick",
 		geo: {lat:52.6592180, lon:13.5331430},
-		pos: {x:708, y:709},
+		pos: {x:889, y:898},
 		zone: "C"
 	},
 	9320001: {
@@ -202,32 +202,25 @@ var stations = {
 		pos: {x:784, y:29},
 		zone: "C"
 	},
-	9200009: {
-		type: "S",
-		name: "Hohen Neuendorf",
-		geo: {lat:52.6694340, lon:13.2872240},
-		pos: {x:406, y:702},
-		zone: "C"
-	},
 	9200011: {
 		type: "S",
 		name: "Bergfelde",
 		geo: {lat:52.6696950, lon:13.3214550},
-		pos: {x:464, y:706},
+		pos: {x:576, y:895},
 		zone: "C"
 	},
 	9200012: {
 		type: "S",
 		name: "Schönfließ",
 		geo: {lat:52.6647100, lon:13.3388800},
-		pos: {x:516, y:706},
+		pos: {x:643, y:895},
 		zone: "C"
 	},
 	9200013: {
 		type: "S",
 		name: "Mühlenbeck-Mönchmühle",
 		geo: {lat:52.6540760, lon:13.3882240},
-		pos: {x:580, y:706},
+		pos: {x:726, y:895},
 		zone: "C"
 	},
 	9220114: {
@@ -262,21 +255,21 @@ var stations = {
 		type: "S",
 		name: "Nordbahnhof",
 		geo: {lat:52.5316730, lon:13.3887940},
-		pos: {x:526, y:484},
+		pos: {x:659, y:612},
 		zone: "A"
 	},
 	9008101: {
 		type: "S",
 		name: "Humboldthain",
 		geo: {lat:52.5447420, lon:13.3787260},
-		pos: {x:526, y:499},
+		pos: {x:659, y:630},
 		zone: "A"
 	},
 	9012101: {
 		type: "S",
 		name: "Anhalter Bahnhof",
 		geo: {lat:52.5045380, lon:13.3820770},
-		pos: {x:488, y:352},
+		pos: {x:606, y:442},
 		zone: "A"
 	},
 	9020202: {
@@ -388,84 +381,84 @@ var stations = {
 		type: "S",
 		name: "Zehlendorf",
 		geo: {lat:52.4312090, lon:13.2592270},
-		pos: {x:212, y:98},
+		pos: {x:254, y:113},
 		zone: "B"
 	},
 	9049202: {
 		type: "S",
 		name: "Sundgauer Str.",
 		geo: {lat:52.4361870, lon:13.2735010},
-		pos: {x:255, y:98},
+		pos: {x:309, y:113},
 		zone: "B"
 	},
 	9050301: {
 		type: "S",
 		name: "Mexikoplatz",
 		geo: {lat:52.4371660, lon:13.2320600},
-		pos: {x:185, y:123},
+		pos: {x:218, y:146},
 		zone: "B"
 	},
 	9050355: {
 		type: "S",
 		name: "Schlachtensee",
 		geo: {lat:52.4398060, lon:13.2139860},
-		pos: {x:158, y:129},
+		pos: {x:184, y:154},
 		zone: "B"
 	},
 	9052201: {
 		type: "S",
 		name: "Nikolassee",
 		geo: {lat:52.4312100, lon:13.1932980},
-		pos: {x:113, y:101},
+		pos: {x:131, y:119},
 		zone: "B"
 	},
 	9053301: {
 		type: "S",
 		name: "Wannsee Bhf",
 		geo: {lat:52.4214570, lon:13.1790990},
-		pos: {x:100, y:87},
+		pos: {x:113, y:101},
 		zone: "B"
 	},
 	9054104: {
 		type: "S",
 		name: "Schöneberg",
 		geo: {lat:52.4798110, lon:13.3528480},
-		pos: {x:427, y:226},
+		pos: {x:536, y:285},
 		zone: "A"
 	},
 	9057104: {
 		type: "S",
 		name: "Julius-Leber-Brücke",
 		geo: {lat:52.4862630, lon:13.3607750},
-		pos: {x:452, y:250},
+		pos: {x:561, y:310},
 		zone: "A"
 	},
 	9058101: {
 		type: "S",
 		name: "Südkreuz Bhf",
 		geo: {lat:52.4754680, lon:13.3655790},
-		pos: {x:488, y:226},
+		pos: {x:608, y:285},
 		zone: "A"
 	},
 	9058102: {
 		type: "S",
 		name: "Priesterweg",
 		geo: {lat:52.4592390, lon:13.3560280},
-		pos: {x:488, y:178},
+		pos: {x:608, y:217},
 		zone: "B"
 	},
 	9060101: {
 		type: "S",
 		name: "Friedenau",
 		geo: {lat:52.4700020, lon:13.3405980},
-		pos: {x:401, y:200},
+		pos: {x:496, y:245},
 		zone: "B"
 	},
 	9063101: {
 		type: "S",
 		name: "Feuerbachstr.",
 		geo: {lat:52.4635780, lon:13.3324120},
-		pos: {x:378, y:177},
+		pos: {x:466, y:215},
 		zone: "B"
 	},
 	9063452: {
@@ -500,14 +493,14 @@ var stations = {
 		type: "S",
 		name: "Lichterfelde West",
 		geo: {lat:52.4435120, lon:13.2941410},
-		pos: {x:309, y:108},
+		pos: {x:376, y:125},
 		zone: "B"
 	},
 	9066102: {
 		type: "S",
 		name: "Botanischer Garten",
 		geo: {lat:52.4475520, lon:13.3060410},
-		pos: {x:329, y:127},
+		pos: {x:402, y:151},
 		zone: "B"
 	},
 	9067221: {
@@ -521,35 +514,35 @@ var stations = {
 		type: "S",
 		name: "Attilastr.",
 		geo: {lat:52.4472980, lon:13.3611770},
-		pos: {x:500, y:153},
+		pos: {x:622, y:185},
 		zone: "B"
 	},
 	9072101: {
 		type: "S",
 		name: "Buckower Chaussee",
 		geo: {lat:52.4109190, lon:13.3826890},
-		pos: {x:527, y:104},
+		pos: {x:657, y:120},
 		zone: "B"
 	},
 	9073101: {
 		type: "S",
 		name: "Marienfelde",
 		geo: {lat:52.4238160, lon:13.3750220},
-		pos: {x:521, y:132},
+		pos: {x:649, y:158},
 		zone: "B"
 	},
 	9074201: {
 		type: "S",
 		name: "Lichtenrade",
 		geo: {lat:52.3877060, lon:13.3963580},
-		pos: {x:527, y:46},
+		pos: {x:657, y:47},
 		zone: "B"
 	},
 	9074202: {
 		type: "S",
 		name: "Schichauweg",
 		geo: {lat:52.3985630, lon:13.3894570},
-		pos: {x:527, y:77},
+		pos: {x:657, y:67},
 		zone: "B"
 	},
 	9077106: {
@@ -570,7 +563,7 @@ var stations = {
 		type: "S",
 		name: "Wilhelmsruh",
 		geo: {lat:52.5815880, lon:13.3632840},
-		pos: {x:453, y:653},
+		pos: {x:569, y:832},
 		zone: "B"
 	},
 	9085105: {
@@ -583,7 +576,7 @@ var stations = {
 		type: "S",
 		name: "Schönholz",
 		geo: {lat:52.5719010, lon:13.3802420},
-		pos: {x:476, y:632}
+		pos: {x:596, y:805}
 	},
 	9089303: {
 		type: "S",
@@ -608,19 +601,19 @@ var stations = {
 		type: "S",
 		name: "Frohnau",
 		geo: {lat:52.6329580, lon:13.2895640},
-		pos: {x:420, y:692}
+		pos: {x:519, y:876}
 	},
 	9093201: {
 		type: "S",
 		name: "Hermsdorf",
 		geo: {lat:52.6181650, lon:13.3068040},
-		pos: {x:427, y:684}
+		pos: {x:529, y:866}
 	},
 	9094101: {
 		type: "S",
 		name: "Waidmannslust",
 		geo: {lat:52.6068140, lon:13.3205490},
-		pos: {x:432, y:673}
+		pos: {x:540, y:861}
 	},
 	9096405: {
 		type: "S",
@@ -639,7 +632,8 @@ var stations = {
 		type: "S",
 		name: "Oranienburger Str.",
 		geo: {lat:52.5251610, lon:13.3930680},
-		pos: {x:526, y:468}
+		pos: {x:659, y:591},
+		zone: "A"
 	},
 	9110002: {
 		type: "S",
@@ -663,7 +657,7 @@ var stations = {
 		type: "S",
 		name: "Bornholmer Str.",
 		geo: {lat:52.5547540, lon:13.3978400},
-		pos: {x:547, y:548}
+		pos: {x:689, y:695}
 	},
 	9110012: {
 		type: "S",
@@ -685,44 +679,35 @@ var stations = {
 		pos: {x:663, y:371},
 		zone: "A"
 	},
-/*
-	9120011: {
-		type: "S",
-		name: "Warschauer Str.",
-		geo: {lat:52.5077480, lon:13.4509920},
-		pos: {x:681, y:353},
-		zone: "A"
-	},
-*/
 	9130001: {
 		type: "S",
 		name: "Pankow-Heinersdorf",
 		geo: {lat:52.5776030, lon:13.4290900},
-		pos: {x:628, y:629}
+		pos: {x:791, y:794}
 	},
 	9130003: {
 		type: "S",
 		name: "Wollankstr.",
 		geo: {lat:52.5649740, lon:13.3931500},
-		pos: {x:529, y:579}
+		pos: {x:659, y:742}
 	},
 	9135001: {
 		type: "S",
 		name: "Buch",
 		geo: {lat:52.6366140, lon:13.4924520},
-		pos: {x:689, y:688}
+		pos: {x:862, y:871}
 	},
 	9142001: {
 		type: "S",
 		name: "Blankenburg",
 		geo: {lat:52.5910690, lon:13.4429720},
-		pos: {x:647, y:648}
+		pos: {x:815, y:818}
 	},
 	9143001: {
 		type: "S",
 		name: "Karow Bhf",
 		geo: {lat:52.6157550, lon:13.4700810},
-		pos: {x:676, y:679}
+		pos: {x:851, y:860}
 	},
 	9151001: {
 		type: "S",
@@ -950,7 +935,7 @@ var stations = {
 		type: "S+U",
 		name: "Gesundbrunnen Bhf ",
 		geo: {lat:52.5486370, lon:13.3883720},
-		pos: {x:526, y:516}
+		pos: {x:659, y:651}
 	},
 	9009104: {
 		type: "S+U",
@@ -1001,13 +986,13 @@ var stations = {
 		type: "S+U",
 		name: "Yorckstr.",
 		geo: {lat:52.4927660, lon:13.3704290},
-		pos: {x:485, y:278}
+		pos: {x:604, y:345}
 	},
 	9062202: {
 		type: "S+U",
 		name: "Rathaus Steglitz",
 		geo: {lat:52.4550660, lon:13.3221520},
-		pos: {x:348, y:148}
+		pos: {x:428, y:177}
 	},
 	9068201: {
 		type: "S+U",
@@ -1034,7 +1019,7 @@ var stations = {
 		type: "S+U",
 		name: "Wittenau",
 		geo: {lat:52.5963920, lon:13.3354810},
-		pos: {x:443, y:667},
+		pos: {x:552, y:849},
 		zone: "B"
 	},
 	9096458: {
@@ -1048,8 +1033,7 @@ var stations = {
 		type: "S+U",
 		name: "Friedrichstr. Bhf",
 		geo: {lat:52.5202700, lon:13.3871530},
-//		pos: {x:505, y:455},
-		pos: {x:521, y:439},
+		pos: {x:648, y:552},
 		zone: "A"
 	},
 	9100003: {
@@ -1070,13 +1054,13 @@ var stations = {
 		type: "S+U",
 		name: "Potsdamer Platz Bhf",
 		geo: {lat:52.5093400, lon:13.3764540},
-		pos: {x:482, y:374}
+		pos: {x:606, y:470}
 	},
 	9100025: {
 		type: "S+U",
 		name: "Brandenburger Tor",
 		geo: {lat:52.5165110, lon:13.3819370},
-		pos: {x:488, y:399}
+		pos: {x:606, y:503}
 	},
 	9110001: {
 		type: "S+U",
@@ -1102,7 +1086,7 @@ var stations = {
 		type: "S+U",
 		name: "Pankow",
 		geo: {lat:52.5672810, lon:13.4122790},
-		pos: {x:602, y:596}
+		pos: {x:751, y:754}
 	},
 	9160004: {
 		type: "S+U",
@@ -2001,7 +1985,7 @@ var stations = {
 		type: "U",
 		name: "Oranienburger Tor",
 		geo: {lat:52.5251630, lon:13.3875870},
-		pos: {x:505, y:455},
+		pos: {x:659, y:591},
 		zone: "A"
 	},
 	9100023: {

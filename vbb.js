@@ -214,15 +214,15 @@ function drawLineMap(line, name) {
 		next = stations[line.stations[i+1]];
 
 		if (prev) {
-			px =   prev.pos.x + (line.offsets[i-1] ? line.offsets[i-1].x : 0);
-			py = - prev.pos.y + (line.offsets[i-1] ? line.offsets[i-1].y : 0);
+			px =   prev.pos.x + (line.offsets[i-1] ?   line.offsets[i-1].x : 0);
+			py = - prev.pos.y + (line.offsets[i-1] ? - line.offsets[i-1].y : 0);
 		} else {
 			px = 0;
 			py = 0;
 		}
 
-		cx =   curr.pos.x + (line.offsets[i] ? line.offsets[i].x : 0);
-		cy = - curr.pos.y + (line.offsets[i] ? line.offsets[i].y : 0);
+		cx =   curr.pos.x + (line.offsets[i] ?   line.offsets[i].x : 0);
+		cy = - curr.pos.y + (line.offsets[i] ? - line.offsets[i].y : 0);
 
 		if (i == 0) {
 			path  = "M " + cx + " " + cy + " ";
