@@ -1,11 +1,12 @@
-var canvas;
-var svg;
-var network; // the actual SVG element
+var canvas;	// the div that will contain the <svg> element
+var svg;	// the actual <svg> element
+var map;	// the top-most group, containing all svg elements
+
 var scale = 3.6;
 var posx = 0;
 var posy = 0;
 
-var mode = 0;
+var mode = 0; // 0 = map mode, 1 = geo mode
 
 var mousedown = 0;
 var mousedrag = 0;
@@ -73,20 +74,21 @@ function onMouseWheel(event) {
 }
 
 function clear() {
-	network.remove();
+	map.remove();
 	scale = 3.6;
 	posx = 0;
 	posy = 0;
 }
 
 function render() {
-	network = canvas.group().attr({"id":"network"});
+	map = canvas.group().attr({"id":"routemap"});
+	
 	drawLines();
 	drawStations();
 }
 
 function update() {
-	var bbox = document.getElementById("network").getBBox();
+	var bbox = document.getElementById("routemap").getBBox();
 
 	var mapcenterx = bbox.x + (bbox.width * 0.5);
 	var mapcentery = bbox.y + (bbox.height * 0.5);
@@ -109,11 +111,11 @@ function update() {
 	var s  = "scale(" + scale + ")";
 	var t1 = "translate(" + (-t1x) + " " + (-t1y) + ")";
 
-	network.attr({transform: t2 + " " + s + " " + t1});
+	map.attr({transform: t2 + " " + s + " " + t1});
 /*
-	network.translate(-t1x, -t1y);
-	network.scale(scale, scale);
-	network.translate(t2x, t2y);
+	map.translate(-t1x, -t1y);
+	map.scale(scale, scale);
+	map.translate(t2x, t2y);
 */
 }
 
@@ -162,6 +164,15 @@ function drawLines() {
 }
 
 function drawStations() {
+	if (mode == 0) {
+		drawStationsMap();
+	}
+	else {
+		drawStationsGeo();
+	}
+}
+
+function drawStationsMap() {
 	var x, y = 0;
 	var curr = null;
 	var r  = mode == 0 ? 5.2 : 2.2;
@@ -177,9 +188,44 @@ function drawStations() {
 		else {
 			x =   (curr.geo.lon) * 600;
 			y = - (curr.geo.lat) * 1000;
-		}			
-		network.circle(r)
-				.attr({id:"station-" + station, name:curr.name ,cx:x, cy:y})
+		}
+
+		var w = (curr.dot) ? curr.dot.w * scale : r;
+		var h = (curr.dot) ? curr.dot.h * scale : r;
+		var rot = (curr.dot) ? curr.dot.r : 0;
+
+		map.rect(w, h)
+				.radius(w*0.5)
+				.center(x,y)
+				.rotate(rot)
+				.attr({id:"station-" + station, name:curr.name})
+				.fill({color:"#fff"})
+				.stroke({width:sw, color:"#000"})
+				.addClass("station")
+				.mouseover(onMouseOverStation);
+	}
+}
+
+function drawStationsGeo() {
+	var x, y = 0;
+	var curr = null;
+	var r  = mode == 0 ? 5.2 : 2.2;
+	var sw = mode == 0 ? 0.75 : 0.75;
+
+	for (var station in stations) {
+		curr = stations[station];
+
+		if (mode == 0) {
+			x =   curr.pos.x;
+			y = - curr.pos.y;
+		}
+		else {
+			x =   (curr.geo.lon) * 600;
+			y = - (curr.geo.lat) * 1000;
+		}
+
+		map.circle(r)
+				.attr({id:"station-" + station, name:curr.name, cx:x, cy:y})
 				.fill({color:"#fff"})
 				.stroke({width:sw, color:"#000"})
 				.addClass("station")
@@ -327,10 +373,10 @@ function drawLineMap(line, name) {
 		++i;
 	}
 
-	network.path(path)
+	map.path(path)
 		.attr({id:"line-" + name})
 		.fill({color:"none"})
-		.stroke({width:3, color:line.color});
+		.stroke({width:3, color:line.color, linejoin:"round", linecap:"round"});
 }
 
 function drawLineGeo(line, name) {
@@ -354,7 +400,7 @@ function drawLineGeo(line, name) {
 		prev = station;
 	}
 
-	network.path(path)
+	map.path(path)
 		.attr({id:"line-" + name})
 		.fill({color:"none"})
 		.stroke({color:line.color});
