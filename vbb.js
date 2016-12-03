@@ -83,6 +83,9 @@ function clear() {
 function render() {
 	map = canvas.group().attr({"id":"routemap"});
 	
+	if (mode==0) {
+		drawLineMap(lines["S41"], "S41", true);
+	}
 	drawLines();
 	drawStations();
 }
@@ -246,7 +249,7 @@ function drawLine(line, name) {
 	}
 }
 
-function drawLineMap(line, name) {
+function drawLineMap(line, name, zone=false) {
 	var path = "";
 	var prev, curr, next = null;
 	var px, py, cx, cy = 0;
@@ -292,7 +295,6 @@ function drawLineMap(line, name) {
 				v = 0;
 			}
 			else if (dxa == dya) { // stations are on a perfect 45 degree line
-				//console.log("45: " + prev.name + " to " + curr.name);
 				path += "L " + cx + " " + cy + " ";
 				h = 1;
 				v = 1;
@@ -300,16 +302,6 @@ function drawLineMap(line, name) {
 			else { // this is where it gets complicated
 				if (dxa > dya) { // distance on x greater
 					if (h == 1 && v == 0) {
-						/*
-						// H -> D -> H
-						var ix1 = px + (dxa * 0.5 - dya * 0.5) * Math.sign(dx);
-						path += "H " + ix1 + " ";
-						var ix2 = ix1 + dya * Math.sign(dx);
-						path += "L " + ix2 + " " + cy + " ";
-						path += "H " + cx;
-						h = 1;
-						v = 0;
-						*/
 						// H -> D
 						path += "H " + (px + (dxa - dya) * Math.sign(dx)) + " ";
 						path += "L " + cx + " " + cy + " ";
@@ -373,10 +365,18 @@ function drawLineMap(line, name) {
 		++i;
 	}
 
-	map.path(path)
-		.attr({id:"line-" + name})
-		.fill({color:"none"})
-		.stroke({width:3, color:line.color, linejoin:"round", linecap:"round"});
+	if (zone) {
+		map.path(path)
+			.attr({id:"zone-A"})
+			.fill({color:"#fff"})
+			.stroke({width:3*8, color:"#fff", linecap:"round"});
+	}
+	else {
+		map.path(path)
+			.attr({id:"line-" + name})
+			.fill({color:"none"})
+			.stroke({width:3, color:line.color, linejoin:"round", linecap:"round"});
+	}
 }
 
 function drawLineGeo(line, name) {

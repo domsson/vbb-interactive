@@ -27,17 +27,17 @@ var lines = {
 	"S1": {
 		color: "#d86aa8",
 		stations: [9053301, 9052201, 9050355, 9050301, 9049201, 9049202, 9066101, 9066102, 9062202, 9063101, 9060101, 9054104, 9057104, 9057103, 9012101, 9100020, 9100025, 9100001, 9100007, 9007104, 9008101, 9007102, 9110011, 9130003, 9085201, 9084101, 9096101, 9094101, 9093201, 9092201, 9200009, 9200008, 9200007, 9200006, 9200005],
-		offsets: [null, null, null, null, null, null, null, null, null, null, null, null, null, {x:-8, y:0}, {x:-2, y:0}, {x:-2, y:0}, {x:-2, y:0}, {x:-1, y:2}, {x:-2, y:0}, {x:-2, y:0}, {x:-2, y:0}, {x:-4, y:0}, {x:-5, y:4}, {x:-3, y:-3}, {x:-3, y:-3}, {x:-3, y:-3}, {x:-3, y:-3}, {x:-3, y:-3}, null, null, null, null, null, null, null]
+		offsets: [null, null, null, null, null, null, null, null, null, null, null, null, null, {x:-8,y:0}, {x:-2,y:0}, {x:-2,y:0}, {x:-2,y:0}, {x:-4,y:0}, {x:-2,y:0}, {x:-2,y:0}, {x:-2,y:0}, {x:-4,y:0}, {x:-5,y:4}, {x:-3,y:-3}, {x:-3,y:-3}, {x:-3,y:-3}, {x:-3,y:-3}, {x:-3,y:-3}, null, null, null, null, null, null, null]
 	},
 	"S2": {
 		color: "#005b28",
 		stations: [9245027, 9245028, 9074201, 9074202, 9072101, 9073101, 9068301, 9058102, 9058101, 9057103, 9012101, 9100020, 9100025, 9100001, 9100007, 9007104, 9008101, 9007102, 9110011, 9130002, 9130001, 9142001, 9143001, 9135001, 9350162, 9350163, 9350161, 9350160],
-		offsets: [null, null, null, null, null, null, null, null, null, {x:4, y:-5}, {x:2, y:0}, {x:2, y:0}, {x:2, y:0}, {x:2, y:-1}, {x:2, y:0}, {x:2, y:0}, {x:2, y:0}, {x:0, y:0}, {x:-2, y:1}, {x:-3, y:3}, {x:-3, y:3}, {x:-3, y:3}, null, null, null, null, null, null]
+		offsets: [null, null, null, null, null, null, null, null, null, {x:4,y:-5}, {x:2,y:0}, {x:2,y:0}, {x:2,y:0}, {x:2,y:0}, {x:2,y:0}, {x:2,y:0}, {x:2,y:0}, null, {x:-2,y:1}, {x:-3,y:3}, {x:-3,y:3}, {x:-3,y:3}, null, null, null, null, null, null]
 	},
 	"S25": {
 		color: "#005b28",
 		stations: [9220114, 9064201, 9064256, 9064301, 9067221, 9063452, 9058102, 9058101, 9057103, 9012101, 9100020, 9100025, 9100001, 9100007, 9007104, 9008101, 9007102, 9110011, 9130003, 9085201, 9085105, 9096458, 9096405, 9089303, 9091205, 9091203, 9200000],
-		offsets: [null, null, null, null, null, null, null, null, {x:4, y:-5}, {x:2, y:0}, {x:2, y:0}, {x:2, y:0}, {x:2, y:-1}, {x:2, y:0}, {x:2, y:0}, {x:2, y:0}, {x:0, y:0}, {x:-2, y:1}, {x:3, y:3}, {x:3, y:3}, null, null, null, null, null, null, null]
+		offsets: [null, null, null, null, null, null, null, null, {x:4,y:-5}, {x:2,y:0}, {x:2,y:0}, {x:2,y:0}, {x:2,y:0}, {x:2,y:0}, {x:2,y:0}, {x:2,y:0}, {x:0,y:0}, {x:-2,y:1}, {x:3,y:3}, {x:3,y:3}, null, null, null, null, null, null, null]
 	},
 	"S3": {
 		color: "#074a96",
@@ -47,17 +47,17 @@ var lines = {
 	"S5": {
 		color: "#ff5900",
 		stations: [9320001, 9320002, 9320003, 9320004, 9320005, 9320006, 9320007, 9320008, 9320026, 9176001, 9175002, 9175001, 9171001, 9171002, 9160004, 9160003, 9120003, 9120004, 9120005, 9100004, 9100003, 9100002, 9100001, 9003201, 9003102, 9003103, 9023201, 9024203, 9024101, 9024102, 9025423, 9026105, 9025321, 9025424, 9030202, 9029101],
-		offsets: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, {x:0,y:4}, null, null, null, null, null, {x:1,y:2}, null, null, null, null, null, null, {x:0,y:2}, null, null, null, null, null, null]
+		offsets: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, {x:0,y:4}, null, null, null, null, null, {x:0,y:2}, {x:0,y:2}, {x:-2,y:1}, {x:-1,y:2}, {x:-4,y:4}, {x:0,y:2}, {x:0,y:2}, {x:0,y:2}, null, null, null, null, null, null]
 	},
 	"S7": {
 		color: "#764c9a",
 		stations: [9170004, 9170003, 9170002, 9170001, 9170005, 9171003, 9171002, 9160004, 9160003, 9120003, 9120004, 9120005, 9100004, 9100003, 9100002, 9100001, 9003201, 9003102, 9003103, 9023201, 9024203, 9024101, 9024102, 9048101, 9052201, 9053301, 9230003, 9230000, 9230999],
-		offsets: [null, null, null, null, null, null, {x:0,y:-4}, {x:6,y:0}, {x:3,y:-3}, null, {x:-3,y:-3}, {x:-3,y:-3}, {x:-3,y:-3}, {x:-3,y:-3}, {x:0,y:-4}, {x:1,y:-2}, {x:0,y:-4}, {x:3,y:-3}, {x:3,y:-3}, {x:3,y:-3}, {x:0,y:-4}, {x:0,y:-4}, {x:0,y:-2}, null, {x:-3,y:3}, {x:-3,y:3}, null, null, null]
+		offsets: [null, null, null, null, null, null, {x:0,y:-4}, {x:6,y:0}, {x:3,y:-3}, null, {x:-3,y:-3}, {x:-3,y:-3}, {x:-3,y:-3}, {x:-3,y:-3}, {x:0,y:-4}, {x:0,y:-2}, {x:0,y:-2}, {x:1,y:-2}, {x:2,y:-1}, {x:-1,y:1}, {x:0,y:-2}, {x:0,y:-2}, {x:0,y:-2}, null, {x:-3,y:3}, {x:-3,y:3}, null, null, null]
 	},
 	"S75": {
 		color: "#764c9a",
 		stations: [9151001, 9152001, 9152002, 9171003, 9171002, 9160004, 9160003, 9120003, 9120004, 9120005, 9100004, 9100003, 9100002, 9100001, 9003201, 9003102, 9003103, 9023201, 9024203, 9024101, 9024102],
-		offsets: [null, null, null, null, {x:0,y:-4}, {x:6,y:0}, {x:3,y:-3}, null, {x:-3,y:-3}, {x:-3,y:-3}, {x:-3,y:-3}, {x:-3,y:-3}, {x:0,y:-4}, {x:1,y:-2}, {x:0,y:-4}, {x:3,y:-3}, {x:3,y:-3}, {x:3,y:-3}, {x:0,y:-4}, {x:0,y:-4}, {x:-4,y:-2}]
+		offsets: [null, null, null, null, {x:0,y:-4}, {x:6,y:0}, {x:3,y:-3}, null, {x:-3,y:-3}, {x:-3,y:-3}, {x:-3,y:-3}, {x:-3,y:-3}, {x:0,y:-4}, {x:0,y:-2}, {x:0,y:-2}, {x:1,y:-2}, {x:2,y:-1}, {x:-1,y:1}, {x:0,y:-2}, {x:0,y:-2}, {x:-4,y:-2}]
 	},
 	"S8": {
 		color: "#4ea425",
@@ -82,7 +82,7 @@ var lines = {
 	"U2": {
 		color: "#ff3300",
 		stations: [9130002, 9130011, 9110001, 9110006, 9110005, 9100016, 9100003, 9100015, 9100014, 9100013, 9100012, 9100011, 9100010, 9100020, 9005252, 9017103, 9056104, 9056102, 9056101, 9023201, 9023101, 9022201, 9024201, 9022101, 9026202, 9026201, 9026101, 9025203, 9025202],
-		offsets: [{x:3,y:-2}, null, null, null, null, null, {x:6,y:6}, null, null, null, null, null, null, null, null, null, null, {x:0,y:-8}, {x:0,y:-8}, {x:4,y:-4}, null, null, null, null, null, null, null, null, null]
+		offsets: [{x:3,y:-2}, null, null, null, null, null, {x:6,y:6}, null, null, null, null, null, null, null, null, null, null, {x:0,y:-8}, {x:0,y:-8}, null, null, null, null, null, null, null, null, null, null]
 	},
 	"U3": {
 		color: "#019377",
@@ -107,7 +107,7 @@ var lines = {
 	"U6": {
 		color: "#6f4e9c",
 		stations: [9089301, 9088202, 9088201, 9086101, 9087101, 9086102, 9011102, 9011101, 9009103, 9009102, 9009104, 9008102, 9100501, 9100009, 9100019, 9100001, 9100027, 9100011, 9012102, 9012103, 9017101, 9017102, 9068101, 9068201, 9068202, 9068302, 9069271, 9070101, 9070301],
-		offsets: [null, null, null, null, null, null, null, null, null, null, {x:2,y:-2}, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+		offsets: [null, null, null, null, null, null, null, null, null, null, {x:2,y:-2}, null, null, null, null, {x:-1,y:0}, null, null, null, null, null, null, null, null, null, null, null, null, null]
 	},
 	"U7": {
 		color: "#3690c0",
@@ -122,6 +122,6 @@ var lines = {
 	"U9": {
 		color: "#ff7300",
 		stations: [9009202, 9009201, 9009102, 9009101, 9001201, 9002201, 9003104, 9003101, 9023201, 9023203, 9042101, 9043201, 9044201, 9044202, 9061102, 9061101, 9062203, 9062202],
-		offsets: [null, null, null, null, null, null, null, null, {x:9,y:-9}, null, null, null, null, null, null, null, null, null]
+		offsets: [null, null, null, null, null, null, null, null, {x:5,y:-5}, null, null, null, null, null, null, null, null, null]
 	}
 };
