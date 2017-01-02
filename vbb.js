@@ -369,7 +369,7 @@ function drawLineMap(line, name, zone=false) {
 		map.path(path)
 			.attr({id:"zone-A"})
 			.fill({color:"#fff"})
-			.stroke({width:3*8, color:"#fff", linecap:"round"});
+			.stroke({width:3*9, color:"#fff", linecap:"round"});
 	}
 	else {
 		map.path(path)
