@@ -1,5 +1,5 @@
 var stations = {
-	0000001: {
+	1000001: {
 		type: "CP",
 		name: "",
 		zone: "",
@@ -7,7 +7,7 @@ var stations = {
 		pos: {x:787, y:531},
 		dot: {}
 	},
-	0000002: {
+	1000002: {
 		type: "CP",
 		name: "",
 		zone: "",
@@ -15,7 +15,7 @@ var stations = {
 		pos: {x:787, y:495},
 		dot: {}
 	},
-	0000003: {
+	1000003: {
 		type: "CP",
 		name: "",
 		zone: "",
@@ -23,7 +23,7 @@ var stations = {
 		pos: {x:513, y:888},
 		dot: {}
 	},
-	0000004: {
+	1000004: {
 		type: "CP",
 		name: "",
 		zone: "",
@@ -31,7 +31,7 @@ var stations = {
 		pos: {x:524, y:888},
 		dot: {}
 	},
-	0000005: {
+	1000005: {
 		type: "CP",
 		name: "",
 		zone: "",
@@ -39,7 +39,7 @@ var stations = {
 		pos: {x:696, y:705},
 		dot: {}
 	},
-	0000006: {
+	1000006: {
 		type: "CP",
 		name: "",
 		zone: "",
@@ -47,12 +47,148 @@ var stations = {
 		pos: {x:696, y:699},
 		dot: {}
 	},
-	0000007: {
+	1000007: {
 		type: "CP",
 		name: "",
 		zone: "",
 		geo: {},
 		pos: {x:696, y:711},
+		dot: {}
+	},
+	1000008: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:689, y:706},
+		dot: {}
+	},
+	1000009: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:833, y:843},
+		dot: {}
+	},
+	1000010: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:682, y:685},
+		dot: {}
+	},
+	1000011: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:682, y:679},
+		dot: {}
+	},
+	1000012: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:686, y:683},
+		dot: {}
+	},
+	1000013: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:686, y:681},
+		dot: {}
+	},
+	1000014: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:1056, y:495},
+		dot: {}
+	},
+	1000015: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:1113, y:209},
+		dot: {}
+	},
+	1000016: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:1109, y:201},
+		dot: {}
+	},
+	1000017: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:657, y:411},
+		dot: {}
+	},
+	1000018: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:621, y:411},
+		dot: {}
+	},
+	1000019: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:617, y:407},
+		dot: {}
+	},
+	1000020: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:585, y:467},
+		dot: {}
+	},
+	1000021: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:787, y:536},
+		dot: {}
+	},
+	1000022: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:800, y:479},
+		dot: {}
+	},
+	1000023: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:814, y:493},
+		dot: {}
+	},
+	1000024: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:501, y:403},
 		dot: {}
 	},
 	9310004: {
@@ -833,8 +969,8 @@ var stations = {
 		name: "Ostbahnhof",
 		zone: "A",
 		geo: {lat:52.5100010, lon:13.4357470},
-		pos: {x:836, y:470}
-		
+		pos: {x:835, y:468},
+		dot: {w:1, h:2.5, r:45}		
 	},
 	9130001: {
 		type: "S",
@@ -1289,7 +1425,7 @@ var stations = {
 		name: "Alexanderplatz Bhf",
 		zone: "A",
 		geo: {lat:52.5215120, lon:13.4112670},
-		pos: {x:778, y:528},
+		pos: {x:780, y:529},
 		dot: {w:1, h:5.5, r:45}
 	},
 	9100004: {
@@ -1297,8 +1433,8 @@ var stations = {
 		name: "Jannowitzbrücke",
 		zone: "A",
 		geo: {lat:52.5155000, lon:13.4180270},
-		pos: {x:813, y:493}
-
+		pos: {x:812, y:491},
+		dot: {w:1, h:2.5, r:45}
 	},
 	9100020: {
 		type: "S+U",
@@ -1337,8 +1473,8 @@ var stations = {
 		name: "Warschauer Str.",
 		zone: "A",
 		geo: {lat:52.5058890, lon:13.4487210},
-		pos: {x:860, y:446}
-
+		pos: {x:858, y:445},
+		dot: {w:1, h:2.5, r:45}
 	},
 	9130002: {
 		type: "S+U",

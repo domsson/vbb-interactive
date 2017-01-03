@@ -99,7 +99,7 @@ function update() {
 	var moffx = mouseX - mapcenterx;
 	var moffy = mouseY - mapcentery;
 
-	console.log("mapcenterx="+mapcenterx+" mapcentery="+mapcentery);
+	//console.log("mapcenterx="+mapcenterx+" mapcentery="+mapcentery);
 
 	var t1x = mapcenterx; // + moffx;
 	var t1y = mapcentery; //+ moffy;
@@ -184,28 +184,34 @@ function drawStationsMap() {
 	for (var station in stations) {
 		curr = stations[station];
 
-		if (mode == 0) {
-			x =   curr.pos.x;
-			y = - curr.pos.y;
-		}
-		else {
-			x =   (curr.geo.lon) * 600;
-			y = - (curr.geo.lat) * 1000;
-		}
+		x =   curr.pos.x;
+		y = - curr.pos.y;
 
 		var w = (curr.dot) ? curr.dot.w * scale : r;
 		var h = (curr.dot) ? curr.dot.h * scale : r;
 		var rot = (curr.dot) ? curr.dot.r : 0;
 
-		map.rect(w, h)
+		if (curr.type == "CP") {
+			/*
+			map.circle(r*0.5)
+				.attr({id:"cp-" + station, name:curr.name, cx:x, cy:y})
+				.fill({color:"#777"})
+				.stroke({width:sw, color:"#fff"})
+				.addClass("cp")
+				.mouseover(onMouseOverControlPoint);
+			*/
+		}
+		else {
+			map.rect(w, h)
 				.radius(w*0.5)
 				.center(x,y)
 				.rotate(rot)
-				.attr({id:"station-" + station, name:curr.name})
+				.attr({id:"station-" + station})
 				.fill({color:"#fff"})
 				.stroke({width:sw, color:"#000"})
 				.addClass("station")
 				.mouseover(onMouseOverStation);
+		}
 	}
 }
 
@@ -217,27 +223,31 @@ function drawStationsGeo() {
 
 	for (var station in stations) {
 		curr = stations[station];
+		
+		if (curr.type == "CP") {
+			// skip map control points
+			continue;
+		}
 
-		if (mode == 0) {
-			x =   curr.pos.x;
-			y = - curr.pos.y;
-		}
-		else {
-			x =   (curr.geo.lon) * 600;
-			y = - (curr.geo.lat) * 1000;
-		}
+		x =   (curr.geo.lon) * 600;
+		y = - (curr.geo.lat) * 1000;
 
 		map.circle(r)
-				.attr({id:"station-" + station, name:curr.name, cx:x, cy:y})
-				.fill({color:"#fff"})
-				.stroke({width:sw, color:"#000"})
-				.addClass("station")
-				.mouseover(onMouseOverStation);
+			.attr({id:"station-" + station, name:curr.name, cx:x, cy:y})
+			.fill({color:"#fff"})
+			.stroke({width:sw, color:"#000"})
+			.addClass("station")
+			.mouseover(onMouseOverStation);
 	}
 }
 
 function onMouseOverStation(event) {
-	console.log(event.target.getAttribute("name"));
+	console.log("Station: " + event.target.getAttribute("name"));
+}
+
+function onMouseOverControlPoint(event) {
+	console.log("CP: " + event.target.getAttribute("id")
+				+ " @ " + event.target.getAttribute("cx") + ", " + event.target.getAttribute("cy"));
 }
 
 function drawLine(line, name) {
