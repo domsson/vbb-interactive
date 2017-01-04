@@ -191,6 +191,30 @@ var stations = {
 		pos: {x:501, y:403},
 		dot: {}
 	},
+	1000025: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:1113, y:443},
+		dot: {}
+	},
+	1000026: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:1102, y:495},
+		dot: {}
+	},
+	1000027: {
+		type: "CP",
+		name: "",
+		zone: "",
+		geo: {},
+		pos: {x:132, y:126},
+		dot: {}
+	},
 	9310004: {
 		type: "S",
 		name: "Erkner Bhf",
