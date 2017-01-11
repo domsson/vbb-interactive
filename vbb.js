@@ -70,6 +70,8 @@ function onMouseWheel(event) {
 			break;
 	}
 	scale -= event.deltaY * factor;
+	if (scale < 0.1) { scale = 0.1; }
+	if (scale > 10) { scale = 10; }
 	update();
 }
 
@@ -88,38 +90,22 @@ function render() {
 	}
 	drawLines();
 	drawStations();
+	update();
 }
 
 function update() {
 	var bbox = document.getElementById("routemap").getBBox();
+	
+	// Center the map inside of the viewport
+	var wx = (window.innerWidth * 0.5);
+	var wy = (window.innerHeight * 0.5);
+	var tx = - (bbox.width * 0.5);
+	var ty =   (bbox.height * 0.5);
+	
+	map.scale(scale);
+	map.translate((tx + posx) * scale + wx, (ty + posy) * scale + wy);
 
-	var mapcenterx = bbox.x + (bbox.width * 0.5);
-	var mapcentery = bbox.y + (bbox.height * 0.5);
-
-	var moffx = mouseX - mapcenterx;
-	var moffy = mouseY - mapcentery;
-
-	//console.log("mapcenterx="+mapcenterx+" mapcentery="+mapcentery);
-
-	var t1x = mapcenterx; // + moffx;
-	var t1y = mapcentery; //+ moffy;
-
-//	var t2x = t1x + posx + (bbox.width * 0.5 * scale);
-//	var t2y = t1y + posy + (bbox.height * 0.5 * scale);
-
-	var t2x = posx + (bbox.width * 0.5 * scale);
-	var t2y = posy + (bbox.height * 0.5 * scale);
-
-	var t2 = "translate(" + t2x + " " + t2y + ")";
-	var s  = "scale(" + scale + ")";
-	var t1 = "translate(" + (-t1x) + " " + (-t1y) + ")";
-
-	map.attr({transform: t2 + " " + s + " " + t1});
-/*
-	map.translate(-t1x, -t1y);
-	map.scale(scale, scale);
-	map.translate(t2x, t2y);
-*/
+	console.log("posx="+posx+" posy="+posy)
 }
 
 function zoomin() {
